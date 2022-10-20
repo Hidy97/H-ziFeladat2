@@ -8,12 +8,21 @@ body {
 }
 
 nav{
+    height: 50px;
+    max-height: 20%;
+}
+
+nav ul{
+    padding-left: 0;
+    padding-top: 10px;
+    text-align: left;
 }
 
 nav li{
     display: inline-block;
-    width: calc(15% - 12px);
+    width: calc(20% - 12px);
     max-width: 200px;
+    text-align: center;
 }
 
 nav a{
@@ -48,8 +57,15 @@ img {
 
 
 .doboz li{
-    list-style-type: "\27A4";
+    list-style-type: none;
     text-align: left;
+}
+
+
+.doboz li::before{
+    content: "\27A4";
+    color: orange;
+    margin-right: 10px;
 }
 
 .doboz{
@@ -59,8 +75,18 @@ img {
 /*töréspontok megadása*/
 
 @media screen and (max-width: 600px) {
-    body {
-        background-color: rgb(194, 212, 240);
+    nav{
+        height: 100px;
+        max-height: 50%;
+        margin: auto;
+    }
+    
+
+    nav li{
+        max-width: 150px;
+        width: 100%;        
+        font-size: 6vw;
+
     }
 
     main {
@@ -77,8 +103,6 @@ img {
 
 @media screen and (max-width: 300px) {
     main {
-        background-color: rgb(159, 228, 168);
-        color: rgb(180, 131, 221);
         font-size: 10vw;
         grid-template-columns: 1fr;
     }
