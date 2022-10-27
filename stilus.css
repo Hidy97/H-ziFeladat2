@@ -7,11 +7,6 @@ body {
     font-family: cursive;
 }
 
-nav{
-    height: 50px;
-    max-height: 20%;
-}
-
 nav ul{
     padding-left: 0;
     padding-top: 10px;
@@ -20,21 +15,38 @@ nav ul{
 
 nav li{
     display: inline-block;
-    width: calc(20% - 12px);
-    max-width: 200px;
+    width: calc(10% - 16px);
+    max-width: 180px;
     text-align: center;
+    margin-right: 25px;
 }
 
 nav a{
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 
-main {
+h1{
+    font-size: 60px;
+}
+
+#elsofeladat {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+#masodikfeladat{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#harmadikfeladat #kollegak{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
 }
 
@@ -48,6 +60,40 @@ main {
 img {
     max-width: 300px;
     width: 50%;
+}
+
+#masodikfeladat{
+    text-align: left;
+}
+
+#masodikfeladat h1, #harmadikfeladat h1{
+    border-bottom: 1px solid red;
+}
+
+#masodikfeladat img{
+    margin-top: 20%;
+    width: auto;
+    max-width: 300px;;
+}
+
+#harmadikfeladat img{
+    max-width: 250px;
+    max-height: 120px;
+    width: 70%;
+    border-radius: 50%;
+}
+
+#harmfejl{
+    max-width: 500px;
+    width: 80%;
+    margin: auto;
+}
+
+button{
+    color: white;
+    background-color: rgb(49, 49, 133);
+    border: none;
+    padding: 20px;
 }
 
 #kozepso {
@@ -64,7 +110,7 @@ img {
 
 .doboz li::before{
     content: "\27A4";
-    color: orange;
+    color: rgb(255, 60, 0);
     margin-right: 10px;
 }
 
@@ -74,16 +120,27 @@ img {
 
 /*töréspontok megadása*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1350px){
     nav{
-        height: 100px;
-        max-height: 50%;
-        margin: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul{
+        padding: 0;
+        margin: 0;
     }
     
-
     nav li{
-        max-width: 150px;
+        max-width: 100%;
+        width: 100%;     
+        font-size: 6vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav li{
+        max-width: 100%;
         width: 100%;        
         font-size: 6vw;
 
@@ -102,6 +159,12 @@ img {
 }
 
 @media screen and (max-width: 300px) {
+    nav li{
+        max-width: 100%;
+        width: 100%;     
+        font-size: 4vw;
+    }
+
     main {
         font-size: 10vw;
         grid-template-columns: 1fr;
